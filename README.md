@@ -1,4 +1,4 @@
-markdown# Tech Challenge Fase 1 — NPS Preditivo em E-commerce
+Tech Challenge Fase 1 — NPS Preditivo em E-commerce
 
 ## 🎯 Objetivo
 Identificar fatores operacionais que influenciam o NPS e propor uma estratégia 
