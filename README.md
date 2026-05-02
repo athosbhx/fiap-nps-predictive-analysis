@@ -11,89 +11,85 @@ Identificar os principais fatores operacionais que influenciam a satisfação do
 ## 👥 Equipe
 
 * Athos Chagas — RM371204
-* Nome 2 — RM XXXX
+* Luca Prado — RM370843
+* Pedro Olyntho — RM373821
+* Higor Vieira — RM371392
 
 ---
 
 ## 📊 Base de Dados
 
-Dataset contendo informações históricas de pedidos, incluindo:
+O dataset contém informações históricas sobre pedidos, logística e atendimento ao cliente.
 
-* Dados do cliente (idade, região, tempo de relacionamento)
-* Dados do pedido (valor, quantidade, desconto, forma de pagamento)
-* Dados logísticos (tempo de entrega, atraso, tentativas de entrega)
-* Dados de atendimento (contatos, tempo de resolução, reclamações)
-* Indicadores internos (CSAT, recompra)
-* Variável alvo: `nps_score` (0 a 10)
+### Principais variáveis:
+
+* **Cliente:** idade, região, tempo de relacionamento
+* **Pedido:** valor, quantidade de itens, desconto, forma de pagamento
+* **Logística:** tempo de entrega, atraso, tentativas de entrega
+* **Atendimento:** contatos, tempo de resolução, reclamações
+* **Indicadores internos:** CSAT, recompra
+* **Target:** `nps_score` (0 a 10)
+
+> 📁 O arquivo de dados deve ser colocado em:
+
+```
+data/raw/nps_dataset.csv
+```
 
 ---
 
 ## 🧠 Metodologia
 
-O projeto foi estruturado em etapas:
+O projeto foi estruturado nas seguintes etapas:
 
-1. **Entendimento do negócio**
+### 1. Entendimento do negócio
 
-   * Contextualização do problema
-   * Impacto do NPS no e-commerce
+* Contextualização do problema
+* Importância do NPS no e-commerce
 
-2. **Definição da variável target**
+### 2. Definição da variável target
 
-   * `nps_score` como indicador de satisfação
-   * Criação da variável derivada `nps_class`:
+* Utilização do `nps_score`
+* Criação da variável derivada `nps_class`:
 
-     * 0–6 → Detrator
-     * 7–8 → Neutro
-     * 9–10 → Promotor
+  * 0–6 → Detrator
+  * 7–8 → Neutro
+  * 9–10 → Promotor
 
-3. **Análise Exploratória de Dados (EDA)**
+### 3. Análise Exploratória de Dados (EDA)
 
-   * Identificação de padrões e correlações
-   * Análise dos principais geradores de detratores
-   * Investigação de pontos de ruptura na experiência
+* Identificação de padrões e correlações
+* Principais fatores que impactam o NPS
+* Análise de detratores e pontos de ruptura
 
-4. **Feature Engineering**
+### 4. Feature Engineering
 
-   * Criação de variáveis derivadas relevantes
-   * Preparação dos dados para modelagem
-
-5. **(Opcional) Modelagem Preditiva**
-
-   * Classificação de clientes (Detrator vs Não-Detrator)
-   * Avaliação com métricas de classificação
+* Criação de variáveis derivadas
+* Preparação dos dados para modelagem
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-```bash
+```
 nps-predictive-analysis/
 │
 ├── data/
 │   ├── raw/
-│   ├── processed/
-│   └── external/
-│
+│   └── processed/
+│   
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   └── 03_modeling.ipynb
+│   ├── 01_EDA_NPS.ipynb
+│   └── 02_Tratamento_Dados_NPS.ipynb
+│   
 │
 ├── src/
-│   ├── data/
-│   ├── features/
-│   ├── models/
-│   └── utils/
-│
-├── models/
+|   ├── utils
+│   └── init
 │
 ├── reports/
-│   ├── figures/
-│   ├── insights.md
-│   └── business_understanding.md
-│
-├── presentation/
-│   └── slides.pdf
+│   └── figures
+|
 │
 ├── README.md
 ├── requirements.txt
@@ -105,30 +101,74 @@ nps-predictive-analysis/
 ## 🔍 Principais Insights
 
 * Atrasos na entrega possuem forte impacto negativo no NPS
-* Alto número de contatos com o suporte está associado a clientes detratores
-* Tempo elevado de resolução de problemas reduz significativamente a satisfação
-* Clientes com maior tempo de relacionamento tendem a apresentar maior NPS
+* Alto número de contatos com suporte está associado a detratores
+* Tempo elevado de resolução reduz significativamente a satisfação
+* Clientes com maior tempo de relacionamento tendem a maior NPS
 
 ---
 
 ## ⚙️ Como reproduzir o projeto
 
+### 1. Clonar o repositório
+
 ```bash
-git clone https://github.com/seu-usuario/nps-predictive-analysis.git
-cd nps-predictive-analysis
+git clone https://github.com/athosbhx/fiap-nps-predictive-analysis.git
+cd fiap-nps-predictive-analysis
+```
 
+---
+
+### 2. Criar e ativar ambiente virtual
+
+```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+```
 
+#### Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+#### Linux/Mac:
+
+```bash
+source .venv/bin/activate
+```
+
+---
+
+### 3. Instalar dependências
+
+```bash
 pip install -r requirements.txt
+```
+
+---
+
+### 4. Executar os notebooks
+
+```bash
 jupyter lab
 ```
 
-Execute os notebooks na seguinte ordem:
+Ou abra diretamente no VSCode.
 
-1. `01_eda.ipynb`
-2. `02_feature_engineering.ipynb`
-3. `03_modeling.ipynb` (opcional)
+---
+
+### 5. Ordem de execução
+
+1. `notebooks/01_EDA_NPS.ipynb`
+2. `notebooks/02_Tratamento_Dados_NPS.ipynb`
+
+
+---
+
+## ⚠️ Observações importantes
+
+* Os notebooks devem ser executados em ordem
+* Os caminhos utilizados são relativos (`../data/...`)
+* Certifique-se de que o dataset está na pasta correta antes de executar
 
 ---
 
@@ -143,16 +183,10 @@ Os resultados permitem:
 
 ---
 
-## 📺 Apresentação
-
-* Slides: `presentation/slides.pdf`
-* Vídeo: [inserir link aqui]
-
----
 
 ## 🛠️ Stack Tecnológica
 
-* Python 3.11
+* Python 
 * pandas
 * numpy
 * scikit-learn
@@ -166,6 +200,13 @@ Os resultados permitem:
 
 * O NPS é coletado apenas após a experiência
 * Possível viés nos dados históricos
-* Nem todos os fatores de satisfação são observáveis nos dados
+* Nem todos os fatores de satisfação são observáveis
 
+---
 
+## 🔁 Próximos Passos
+
+* Evoluir o modelo preditivo
+* Testar novos algoritmos
+* Implementar pipeline automatizada
+* Integrar com sistemas de decisão em tempo real
