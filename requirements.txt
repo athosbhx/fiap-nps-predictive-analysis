@@ -1,3 +1,18 @@
+# ============================================================
+#  Tech Challenge Fase 1 — NPS Preditivo em E-commerce
+# ============================================================
+#  REQUER PYTHON 3.12.x
+#
+#  As versões fixadas abaixo possuem wheels (binários
+#  pré-compilados) apenas para Python 3.9 a 3.12.
+#  Em Python 3.13+ a instalação falhará tentando compilar
+#  numpy/pandas do zero.
+#
+#  Como criar a venv com Python 3.12:
+#    Windows:       py -3.12 -m venv .venv
+#    Linux/macOS:   python3.12 -m venv .venv
+# ============================================================
+
 pandas==2.2.2
 numpy==1.26.4
 matplotlib==3.9.0
