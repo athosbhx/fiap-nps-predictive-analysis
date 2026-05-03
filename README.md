@@ -87,7 +87,6 @@ fiap-nps-predictive-analysis/
 ├── reports/
 │   └── figures/                            # gráficos exportados da EDA
 │
-├── .python-version                         # marca Python 3.12 (pyenv)
 ├── README.md
 ├── requirements.txt
 └── .gitignore
