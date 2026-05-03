@@ -72,7 +72,6 @@ O projeto foi estruturado nas seguintes etapas:
 ## 📁 Estrutura do Projeto
 
 ```
-<<<<<<< HEAD
 fiap-nps-predictive-analysis/
 │
 ├── data/
@@ -87,26 +86,6 @@ fiap-nps-predictive-analysis/
 │
 ├── reports/
 │   └── figures/                            # gráficos exportados da EDA
-=======
-nps-predictive-analysis/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│   
-├── notebooks/
-│   ├── 01_EDA_NPS.ipynb
-│   └── 02_Tratamento_Dados_NPS.ipynb
-│   
-│
-├── src/
-|   ├── utils
-│   └── init
-│
-├── reports/
-│   └── figures
-|
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 │
 ├── .python-version                         # marca Python 3.12 (pyenv)
 ├── README.md
@@ -127,7 +106,6 @@ nps-predictive-analysis/
 
 ## ⚙️ Como reproduzir o projeto
 
-<<<<<<< HEAD
 ### ✅ Pré-requisitos
 
 Este projeto usa versões fixadas de `pandas==2.2.2` e `numpy==1.26.4`, que possuem wheels (binários pré-compilados) apenas para **Python 3.9 a 3.12**.
@@ -140,8 +118,6 @@ Este projeto usa versões fixadas de `pandas==2.2.2` e `numpy==1.26.4`, que poss
 
 ---
 
-=======
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 ### 1. Clonar o repositório
 
 ```bash
@@ -150,7 +126,6 @@ cd fiap-nps-predictive-analysis
 ```
 
 ---
-<<<<<<< HEAD
 
 ### 2. Criar e ativar o ambiente virtual com Python 3.12
 
@@ -180,36 +155,12 @@ python --version
 
 A saída deve ser algo como `Python 3.12.x`. Se aparecer outra versão, **não prossiga** — recrie a venv apontando para o Python 3.12 conforme acima.
 
-=======
-
-### 2. Criar e ativar ambiente virtual
-
-```bash
-python -m venv .venv
-```
-
-#### Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-#### Linux/Mac:
-
-```bash
-source .venv/bin/activate
-```
-
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 ---
 
 ### 3. Instalar dependências
 
 ```bash
-<<<<<<< HEAD
 pip install --upgrade pip
-=======
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 pip install -r requirements.txt
 ```
 
@@ -221,11 +172,7 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-<<<<<<< HEAD
 Ou abra diretamente no VSCode (lembre-se de selecionar o kernel da venv `.venv`).
-=======
-Ou abra diretamente no VSCode.
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 
 ---
 
@@ -242,7 +189,6 @@ Ou abra diretamente no VSCode.
 * Os notebooks devem ser executados em ordem
 * Os caminhos utilizados são relativos (`../data/...`)
 * Certifique-se de que o dataset está na pasta correta antes de executar
-<<<<<<< HEAD
 * Sempre ative a venv antes de rodar os notebooks (`.venv\Scripts\activate` no Windows ou `source .venv/bin/activate` no Linux/macOS)
 
 ---
@@ -281,8 +227,6 @@ Instale a versão 3.12 antes de continuar:
 
 * **Ubuntu/Debian:** `sudo apt install python3.12 python3.12-venv`
 * **macOS (Homebrew):** `brew install python@3.12`
-=======
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 
 ---
 
@@ -300,7 +244,6 @@ Os resultados permitem:
 
 ## 🛠️ Stack Tecnológica
 
-<<<<<<< HEAD
 * **Python 3.12.x** (obrigatório — ver seção de pré-requisitos)
 * pandas 2.2.2
 * numpy 1.26.4
@@ -308,15 +251,6 @@ Os resultados permitem:
 * matplotlib 3.9.0
 * seaborn 0.13.2
 * jupyter / notebook
-=======
-* Python 
-* pandas
-* numpy
-* scikit-learn
-* matplotlib
-* seaborn
-* jupyter
->>>>>>> 884b19eb73215b268cb64225389dc80c9de3239c
 
 ---
 
