@@ -82,7 +82,7 @@ fiap-nps-predictive-analysis/
 │
 ├── notebooks/
 │   ├── 01_EDA_NPS.ipynb                    # análise exploratória + categorização
-│   └── 02_Tratamento_Dados_NPS.ipynb       # split treino/teste estratificado
+│   └── 02_Tratamento_de_dados_NPS+Modelagem_Regressao_Linear.ipynb       # split treino/teste estratificado
 │
 ├── reports/
 │   └── figures/                            # gráficos exportados da EDA
