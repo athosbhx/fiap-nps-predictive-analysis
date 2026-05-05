@@ -178,7 +178,7 @@ Ou abra diretamente no VSCode (lembre-se de selecionar o kernel da venv `.venv`)
 ### 5. Ordem de execução
 
 1. `notebooks/01_EDA_NPS.ipynb`
-2. `notebooks/02_Tratamento_Dados_NPS.ipynb`
+2. `notebooks/02_Tratamento_de_dados_NPS+Modelagem_Regressao_Linear.ipynb`
 
 
 ---
